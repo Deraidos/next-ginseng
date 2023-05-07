@@ -46,7 +46,7 @@ export default function Home() {
         </nav>
       </header>
 
-      {/* highlight latest products */}
+      {/* highlight latest products (OLD)
       <section className="grid__container grid grid-cols-2 ">
         <div className="bg-[#D97A36]">
           <h2>2020</h2>
@@ -55,6 +55,29 @@ export default function Home() {
 
         <div className="relative">
           <img src="/catalog/tikusgot-01.jpeg" />
+        </div>
+      </section> */}
+
+      {/* highlight latest products */}
+      <section className="latest__container flex flex-col-reverse h-full w-full lg:flex-row">
+        <div className="bg-[#D97A36] p-4 flex flex-1 flex-col text-center justify-center space-y-4">
+          <h2 className="text-4xl">2023</h2>
+          <h1 className="text-6xl underline font-bold">TIKUS GOT</h1>
+        </div>
+
+        <div className="flex flex-1 flex-col">
+          <img src="/catalog/tikusgot-01.jpeg" className="h-full w-full" />
+        </div>
+      </section>
+
+      <section className="latest__container flex flex-col-reverse h-full w-full lg:flex-row-reverse">
+        <div className="bg-[#DDC2B7] p-4 flex flex-1 flex-col text-center justify-center space-y-4">
+          <h2 className="text-4xl">2022</h2>
+          <h1 className="text-6xl underline font-bold">BASQUIAT ON THE DRAW</h1>
+        </div>
+
+        <div className="flex flex-1">
+          <img src="/catalog/botd-01.jpeg" className="h-full w-full" />
         </div>
       </section>
     </main>

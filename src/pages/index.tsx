@@ -89,6 +89,35 @@ export default function Home() {
         <p className="font-bold lg:text-xl">GINSENG STRIP</p>
         <p className="font-bold lg:text-xl">SELLING SILK TO PAY THE MILK</p>
       </div>
+
+      <section className="footer__group p-4 lg:p-12">
+        <div className="text-white flex flex-col items-center justify-center py-[23vh] gap-2">
+          <h2 className="font-semibold text-3xl">BE THE FIRST TO KNOW</h2>
+          <input
+            type="email"
+            id="UserEmail"
+            aria-describedby="helper-text-explanation"
+            className="text-white text-sm block p-2.5 w-full lg:w-[50vh]"
+            placeholder="Your email"
+          ></input>
+        </div>
+
+        <footer className="text-black bg-gray-50 flex flex-col lg:flex-row justify-between p-4 h-[340px]">
+          <div>Ginstrip logo black</div>
+          <div>
+            <h2 className="font-bold text-xl">Information</h2>
+            <ul className="flex flex-col gap-2">
+              <li>FAQ</li>
+              <li>Privacy Policy</li>
+              <li>Refund & Return Policy</li>
+              <li>Shipping Information</li>
+            </ul>
+          </div>
+          <div>
+            <h2 className="font-bold text-xl">Reach Us</h2>
+          </div>
+        </footer>
+      </section>
     </main>
   )
 }

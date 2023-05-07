@@ -85,10 +85,9 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="separator bg-gray-50 flex flex-1 justify-evenly p-4">
-        <div>GINSENG STRIP 2020</div>
-
-        <div>SELLING SILK TO PAY THE MILK</div>
+      <div className="separator bg-gray-50 text-center p-4 flex flex-grow justify-center gap-4 lg:gap-[50vw]">
+        <p className="font-bold lg:text-xl">GINSENG STRIP</p>
+        <p className="font-bold lg:text-xl">SELLING SILK TO PAY THE MILK</p>
       </div>
     </main>
   )

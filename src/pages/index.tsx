@@ -62,7 +62,9 @@ export default function Home() {
       <section className="latest__container flex flex-col-reverse h-full w-full lg:flex-row">
         <div className="bg-[#D97A36] p-4 flex flex-1 flex-col text-center justify-center space-y-4">
           <h2 className="text-4xl">2023</h2>
-          <h1 className="text-6xl underline font-bold">TIKUS GOT</h1>
+          <h1 className="text-4xl lg:text-5xl underline font-bold">
+            TIKUS GOT
+          </h1>
         </div>
 
         <div className="flex flex-1 flex-col">
@@ -73,13 +75,21 @@ export default function Home() {
       <section className="latest__container flex flex-col-reverse h-full w-full lg:flex-row-reverse">
         <div className="bg-[#DDC2B7] p-4 flex flex-1 flex-col text-center justify-center space-y-4">
           <h2 className="text-4xl">2022</h2>
-          <h1 className="text-6xl underline font-bold">BASQUIAT ON THE DRAW</h1>
+          <h1 className="text-4xl lg:text-5xl underline font-bold">
+            BASQUIAT ON THE DRAW
+          </h1>
         </div>
 
         <div className="flex flex-1">
           <img src="/catalog/botd-01.jpeg" className="h-full w-full" />
         </div>
       </section>
+
+      <div className="separator bg-gray-50 flex flex-1 justify-evenly p-4">
+        <div>GINSENG STRIP 2020</div>
+
+        <div>SELLING SILK TO PAY THE MILK</div>
+      </div>
     </main>
   )
 }

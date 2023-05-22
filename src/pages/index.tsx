@@ -85,6 +85,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* start white separator */}
       <div className="separator bg-gray-50 text-center p-4 flex flex-grow justify-center gap-4 lg:gap-[50vw]">
         <p className="font-bold lg:text-xl">GINSENG STRIP</p>
         <p className="font-bold lg:text-xl">SELLING SILK TO PAY THE MILK</p>
@@ -97,13 +98,20 @@ export default function Home() {
             type="email"
             id="UserEmail"
             aria-describedby="helper-text-explanation"
-            className="text-white text-sm block p-2.5 w-full lg:w-[50vh]"
+            className="text-black text-sm block p-2.5 w-full lg:w-[50vh]"
             placeholder="Your email"
           ></input>
         </div>
-
-        <footer className="text-black bg-gray-50 flex flex-col lg:flex-row justify-between p-4 h-[340px]">
-          <div>Ginstrip logo black</div>
+        {/* end white separator */}
+        <footer className="text-black bg-gray-50 flex flex-col lg:flex-row justify-between p-[3.5rem] h-[340px]">
+          <div>
+            <Image
+              src="/black-logo_500x500.png"
+              alt={'ginseng strip logo black'}
+              width={96}
+              height={96}
+            />
+          </div>
           <div>
             <h2 className="font-bold text-xl">Information</h2>
             <ul className="flex flex-col gap-2">
@@ -115,6 +123,8 @@ export default function Home() {
           </div>
           <div>
             <h2 className="font-bold text-xl">Reach Us</h2>
+            <div>Instagram</div>
+            <div>Twitter</div>
           </div>
         </footer>
       </section>

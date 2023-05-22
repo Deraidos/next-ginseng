@@ -1,7 +1,7 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { Inconsolata } from 'next/font/google'
 import { ShoppingCart } from '@phosphor-icons/react'
-import Link from 'next/link'
 
 const inconsolata = Inconsolata({ subsets: ['latin'] })
 

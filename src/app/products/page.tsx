@@ -8,19 +8,13 @@ async function getProducts() {
   return data
 }
 
-async function getBlogPosts() {
-  const res = await fetch('https://fakestoreapi.com/products')
-  const posts = await res.json()
-  return posts
-}
-
-export default async function CoolStuff() {
+export default async function Products() {
   const products = await getProducts()
-  const posts = await getBlogPosts()
+
   return (
     <main className="">
       <Header />
-      <div>
+      <section>
         <h1 className="text-3xl font-black px-12 py-4">All Products</h1>
         <div className="grid grid-cols-2 lg:grid-cols-3 px-12">
           {products.map((product: any) => (
@@ -38,7 +32,7 @@ export default async function CoolStuff() {
             </div>
           ))}
         </div>
-      </div>
+      </section>
     </main>
   )
 }

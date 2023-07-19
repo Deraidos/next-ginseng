@@ -1,9 +1,5 @@
-'use client'
 import Header from '@/components/Header'
 import Image from 'next/image'
-import axios from 'axios'
-import { Suspense, useEffect, useState } from 'react'
-import Loading from './loading'
 
 interface Products {
   id: number
@@ -13,19 +9,14 @@ interface Products {
   price: string
 }
 
-export default function Products() {
-  const [products, setProducts] = useState([])
+async function getProducts() {
+  const res = await fetch('https://fakestoreapi.com/products')
+  const data = await res.json()
+  return data
+}
 
-  const getProducts = async () => {
-    axios.get('https://fakestoreapi.com/products').then((res) => {
-      console.log(res.data) // for debugging purposes
-      setProducts(res.data)
-    })
-  }
-
-  useEffect(() => {
-    getProducts()
-  }, [])
+export default async function Products() {
+  const products = await getProducts()
 
   return (
     <main className="">
@@ -33,8 +24,8 @@ export default function Products() {
       <section>
         <h1 className="text-3xl font-black px-12 py-4">All Products</h1>
         <div className="grid grid-cols-2 lg:grid-cols-3 px-12">
-          {products.map((product: Products, index) => (
-            <div key={index} className="flex flex-col p-14 gap-4 justify-start">
+          {products.map((product: Products) => (
+            <div className="flex flex-col p-14 gap-4 justify-start">
               <Image
                 src={product.image}
                 alt={'image description'}
@@ -42,8 +33,10 @@ export default function Products() {
                 height={1080}
                 className="h-1/2 object-scale-down"
               />
-              <h2 className="text-3xl font-bold">{product.title}</h2>
-              <div className="text-xl">
+              <h2 key={product.id} className="text-3xl font-bold">
+                {product.title}
+              </h2>
+              <div key={product.id} className="text-xl">
                 <p>{product.description}</p>
                 <p className="font-bold">Rp{product.price}K</p>
               </div>

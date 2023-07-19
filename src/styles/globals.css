@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --bg-black: @apply bg-[rgb(20, 20, 20)];
+  --bg-white: @apply bg-slate-10;
+}

@@ -17,10 +17,10 @@ export default function Products() {
   const [products, setProducts] = useState([])
 
   const getProducts = async () => {
-    const res = await fetch('https://fakestoreapi.com/products')
-    const data = await res.json()
-    console.log(data) // for debugging
-    setProducts(data)
+    axios.get('https://fakestoreapi.com/products').then((res) => {
+      console.log(res.data) // for debugging
+      setProducts(res.data)
+    })
   }
 
   useEffect(() => {

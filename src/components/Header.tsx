@@ -48,12 +48,14 @@ export default function Navbar() {
 
       <header className="nav nav__container bg-[rgb(20,20,20)] h-[80px] w-full text-white flex justify-between items-center text-xl border-y-2">
         <div className="nav-logo max-w-[80px] m-4 lg:m-16">
-          <Image
-            src="/white-logo-500px.webp"
-            width={500}
-            height={500}
-            alt={'ginseng strip logo'}
-          />
+          <Link href="/">
+            <Image
+              src="/white-logo-500px.webp"
+              width={500}
+              height={500}
+              alt={'ginseng strip logo'}
+            />
+          </Link>
         </div>
 
         {/* navbar desktop */}
